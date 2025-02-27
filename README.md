@@ -6,41 +6,24 @@ customer.addOrder(5000, "Steak");
 console.log(customer.getBalance()); // 19750
 console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 
-audit task 2: const allUsers = [ { name: "Moore Hensley", friends: ["Sharron
-Pace"] }, { name: "Sharlene Bush", friends: ["Briana Decker", "Sharron Pace"] },
-{ name: "Ross Vazquez", friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi
-Buckner"] }, { name: "Elma Head", friends: ["Goldie Gentry", "Aisha Tran"] }, {
-name: "Carey Barr", friends: ["Jordan Sampson", "Eddie Strong"] }, { name:
-"Blackburn Dotson", friends: ["Jacklyn Lucas", "Linda Chapman"] }, { name:
-"Sheree Anthony", friends: ["Goldie Gentry", "Briana Decker"] } ];
+audit task 2: const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
 
-console.log(getUsersWithFriend(allUsers, "Briana Decker")); // [ // { // name:
-"Sharlene Bush", // friends: ["Briana Decker", "Sharron Pace"] // }, // { //
-name: "Sheree Anthony", // friends: ["Goldie Gentry", "Briana Decker"] // } // ]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
 
-console.log(getUsersWithFriend(allUsers, "Goldie Gentry")); // [ // { // name:
-"Elma Head", // friends: ["Goldie Gentry", "Aisha Tran"] // }, // { // name:
-"Sheree Anthony", // friends: ["Goldie Gentry", "Briana Decker"] // } // ]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
-console.log(getUsersWithFriend(allUsers, "Adrian Cross" )); // []
+storage.removeItem("Scaner");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
-audit task 3: console.log( sortByDescendingFriendCount([ { name: "Moore
-Hensley", friends: ["Sharron Pace"], gender: "male" }, { name: "Sharlene Bush",
-friends: ["Briana Decker", "Sharron Pace"], gender: "female" }, { name: "Ross
-Vazquez", friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-gender: "male" }, { name: "Elma Head", friends: ["Goldie Gentry", "Aisha Tran"],
-gender: "female" }, { name: "Carey Barr", friends: ["Jordan Sampson", "Eddie
-Strong"], gender: "male" }, { name: "Blackburn Dotson", friends: ["Jacklyn
-Lucas", "Linda Chapman"], gender: "male" }, { name: "Sheree Anthony", friends:
-["Goldie Gentry", "Briana Decker"], gender: "female" } ]) ); // [ // { // name:
-"Ross Vazquez", // friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi
-Buckner"], // gender: "male" // }, // { // name: "Sharlene Bush", // friends:
-["Briana Decker", "Sharron Pace"], // gender: "female" // }, // { // name: "Elma
-Head", // friends: ["Goldie Gentry", "Aisha Tran"], // gender: "female" // }, //
-{ // name: "Carey Barr", // friends: ["Jordan Sampson", "Eddie Strong"], //
-gender: "male" // }, // { // name: "Blackburn Dotson", // friends: ["Jacklyn
-Lucas", "Linda Chapman"], // gender: "male" // }, // { // name: "Sheree
-Anthony", // friends: ["Goldie Gentry", "Briana Decker"], // gender: "female" //
-}, // { // name: "Moore Hensley", // friends: ["Sharron Pace"], // gender:
-"male" // } // ]
+audit task 3: const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
 
