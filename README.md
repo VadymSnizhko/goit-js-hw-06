@@ -1,15 +1,10 @@
 Second Home Work
 
-audit task 1: console.log( getUserNames([ { name: "Moore Hensley", email:
-"moorehensley@indexia.com", balance: 2811 }, { name: "Sharlene Bush", email:
-"sharlenebush@tubesys.com", balance: 3821 }, { name: "Ross Vazquez", email:
-"rossvazquez@xinware.com", balance: 3793 }, { name: "Elma Head", email:
-"elmahead@omatom.com", balance: 2278 }, { name: "Carey Barr", email:
-"careybarr@nurali.com", balance: 3951 }, { name: "Blackburn Dotson", email:
-"blackburndotson@furnigeer.com", balance: 1498 }, { name: "Sheree Anthony",
-email: "shereeanthony@kog.com", balance: 2764 }, ]) ); // ["Moore Hensley",
-"Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson",
-"Sheree Anthony"]
+audit task 1: customer.setDiscount(0.15);
+console.log(customer.getDiscount()); // 0.15
+customer.addOrder(5000, "Steak");
+console.log(customer.getBalance()); // 19750
+console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 
 audit task 2: const allUsers = [ { name: "Moore Hensley", friends: ["Sharron
 Pace"] }, { name: "Sharlene Bush", friends: ["Briana Decker", "Sharron Pace"] },
@@ -49,13 +44,3 @@ Anthony", // friends: ["Goldie Gentry", "Briana Decker"], // gender: "female" //
 }, // { // name: "Moore Hensley", // friends: ["Sharron Pace"], // gender:
 "male" // } // ]
 
-audit task 4:const clients = [ { name: "Moore Hensley", gender: "male", balance:
-2811 }, { name: "Sharlene Bush", gender: "female", balance: 3821 }, { name:
-"Ross Vazquez", gender: "male", balance: 3793 }, { name: "Elma Head", gender:
-"female", balance: 2278 }, { name: "Carey Barr", gender: "male", balance: 3951
-}, { name: "Blackburn Dotson", gender: "male", balance: 1498 }, { name: "Sheree
-Anthony", gender: "female", balance: 2764 } ];
-
-console.log(getTotalBalanceByGender(clients, "male")); // 12053
-
-console.log(getTotalBalanceByGender(clients, "female")); // 8863
