@@ -1,7 +1,7 @@
 class StringBuilder {
   #value
   constructor(str){
-    this.#value = this.fixType(str);
+    this.#value = str;
   }
 
   getValue(){
@@ -9,23 +9,17 @@ class StringBuilder {
   }
   //this.#value = startStr + this.#value;
   padStart(startStr){
-      this.#value = this.fixType(startStr) + this.#value;
+      this.#value = startStr + this.#value;
     }
 
   padEnd(endStr){
-    this.#value = this.#value + this.fixType(endStr);
+    this.#value = this.#value + endStr;
   }
 
   padBoth(bothStr){
-    this.#value = this.fixType(bothStr) + this.#value + this.fixType(bothStr);
+    this.#value = bothStr + this.#value + bothStr;
   }
 
-  fixType(data){   
-    if (typeof(data) != 'string'){
-      return data.toString();
-    }
-    return data;
-  }
 }
 
 const builder = new StringBuilder(".");
@@ -36,4 +30,3 @@ builder.padEnd("^");
 console.log(builder.getValue()); // "^.^"
 builder.padBoth("=");
 console.log(builder.getValue()); // "=^.^="
-
